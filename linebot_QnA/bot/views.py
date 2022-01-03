@@ -1,3 +1,6 @@
+"""
+Aaron
+"""
 # import 必要的函式庫
 from typing import Any
 from django.conf import settings
@@ -11,6 +14,7 @@ import requests, json
 
 # Linebot的授權TOKEN
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
+
 handler = WebhookHandler(settings.LINE_CHANNEL_SECRET)
 
 events=None
@@ -25,6 +29,8 @@ def get_answer(message_text):
                    url,
                    json.dumps({'question': message_text}),
                    headers={
+            
+                       
                        'Content-Type': 'application/json',
                        'Authorization':'EndpointKey fadacb9d-f2ba-4cd5-a5a8-11377e1e9c8d'
                    }
