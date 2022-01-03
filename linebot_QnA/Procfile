@@ -1,0 +1,2 @@
+web: gunicorn snow_resort_bot.wsgi
+git init
